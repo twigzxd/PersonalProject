@@ -4,6 +4,7 @@ const https = require('https');
 var con = mysql.createConnection({
     host:'twigzxd-db.cu7383oicrfm.us-east-2.rds.amazonaws.com',
     user:'twigzxd',
+    acquireTimeout: 30000, //30 secs
     password:'Twig546190416.',
     database:'twigzxd_db'
 });
@@ -11,6 +12,7 @@ var con = mysql.createConnection({
 con.connect(function (err) {
     if(err) {
         console.log('Fail to connect');
+        console.log(err);
         return;
     }
 
