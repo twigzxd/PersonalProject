@@ -1,7 +1,7 @@
 var mysql = require('mysql');
 const https = require('https');
 
-var con = mysql.createConnection({
+var con = mysql.createPool({
     host:'twigzxd-db.cu7383oicrfm.us-east-2.rds.amazonaws.com',
     user:'twigzxd',
     acquireTimeout: 30000, //30 secs
@@ -9,7 +9,7 @@ var con = mysql.createConnection({
     database:'twigzxd_db'
 });
 
-con.connect(function (err) {
+con.getConnection(function (err) {
     if(err) {
         console.log('Fail to connect');
         console.log(err);
