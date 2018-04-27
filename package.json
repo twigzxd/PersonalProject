@@ -1,0 +1,17 @@
+{
+  "name": "Project",
+  "version": "0.0.1",
+  "author": "ZXD",
+  "description": "第一个node.js程序",
+  "keywords": [
+    "node.js",
+    "javascript"
+  ],
+  "scripts": {
+    "start": "node link.js"
+  },
+  "dependencies": {
+    "mysql": "^2.15.0",
+    "request": "^2.85.0"
+  }
+}
